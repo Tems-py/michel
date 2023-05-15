@@ -13,6 +13,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: #98C1D9;
+    overflow-x: hidden;
 }
 
 #navbar > div:nth-child(3){
