@@ -19,14 +19,12 @@ body {
     overflow-x: hidden;
 }
 
-#navbar > div:nth-child(3){
-    margin-left: 43%;
-}
 
 #navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     gap: 2em;
     font-size: 2em;
     width: 100%;
