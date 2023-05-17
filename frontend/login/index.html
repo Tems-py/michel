@@ -11,10 +11,11 @@
 <body>
     <div id="container">
         <div id="navbar">
-            <div>Strona główna</div>
-            <div>Kurs</div>
-            <div>Logowanie</div>
-            <div>Rejestracja</div>
+            <div><a href="/">Strona główna</a></div>
+            <div><a href="/course/">Kurs</a></div>
+            <div class="hide_when_logged"><a href="/login/">Logowanie</a></div>
+            <div class="hide_when_logged"><a href="/register/">Rejestracja</a></div>
+            <div class="show_when_logged hide"><a href="/logout/">Wyloguj</a></div>
         </div>
         <div id="content">
             <div id="form">
