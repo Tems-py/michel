@@ -27,11 +27,19 @@ class Course(Resource):
 
 class Pages(Resource):
     def get(self, id_page):
-        return jsonify(id_page)
+        cursor = mysql.get_db().cursor()
+        cursor.execute("SELECT id, category, subcategory, content FROM course WHERE id = %s", (id_page,))
+        x = cursor.fetchone()
+        if not x:
+            return jsonify(error="Page not found")
+        l = {'id': x[0], 'category': x[1], 'subcategory': x[2]}
+
+        return jsonify(l)
 
 
 api.add_resource(Course, '/course')
 api.add_resource(Pages, '/course/<int:id_page>')
+
 
 if __name__ == "__main__":
     app.run()
