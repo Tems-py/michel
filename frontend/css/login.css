@@ -11,7 +11,7 @@
 #form{
     background-color: whitesmoke;
     width: 20vw;
-    height: 40vh;
+    min-height: 40vh;
     padding-bottom: 5vh;
     border-radius: 20px;
     display: flex;
@@ -20,3 +20,13 @@
     font-size: 1.5em;
 }
 
+#popup {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    padding: 20px;
+    background-color: orange;
+    border-radius: 5px;
+    transform: translateX(300%);
+    transition: 0.3s transform ease-in-out;
+}
