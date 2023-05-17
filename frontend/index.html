@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="/scripts/auth.js" defer></script>
+
     <title>Testowanie aplikacji</title>
 </head>
 <body>
@@ -14,8 +17,9 @@
             <div id="navbar">
                 <div>Strona główna</div>
                 <div>Kurs</div>
-                <div>Logowanie</div>
-                <div>Rejestracja</div>
+                <div class="hide_when_logged">Logowanie</div>
+                <div class="hide_when_logged">Rejestracja</div>
+                <div class="show_when_logged hide">Wyloguj</div>
             </div>
         </div>
         <div id="about">

@@ -54,3 +54,7 @@ input[type=submit], input[type=button]
     cursor: pointer;
     background-color: #4E598C;
 }
+
+.hide {
+    display: none;
+}
