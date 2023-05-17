@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f49542a574.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../scripts/course.js"></script>
     <link rel="stylesheet" href="../css/course.css">
@@ -14,6 +15,10 @@
     <div id="container">
         <nav class="menu">
             <div class="menu_acc" id="menu_acc" onclick="side_menu()"></div>
+            <div id="nav_buttons">
+                <i class="fa-solid fa-arrow-left-long fa-beat fa-4x" style="color: #000000;" onclick="next_slide()"></i>
+                <i class="fa-solid fa-arrow-right-long fa-beat fa-4x" style="color: #000000;" onclick="previous_slide()"></i>
+            </div>
             <div class="menu_content" id="menu_content">
                 <ul>
                     <li id="topic_1"></li>
