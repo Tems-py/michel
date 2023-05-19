@@ -1,15 +1,21 @@
-
-axios.get('https://jsonplaceholder.typicode.com/todos')
-  .then(function (response) {
-    console.log(response.data["title"]);
-    document.getElementById("topic_1").innerHTML = response.data[0]["title"];
-    document.getElementById("topic_2").innerHTML = response.data[1]["title"];
-    document.getElementById("topic_3").innerHTML = response.data[2]["title"];
-    document.getElementById("topic_4").innerHTML = response.data[3]["title"];
-    document.getElementById("topic_5").innerHTML = response.data[4]["title"];
-    document.getElementById("topic_6").innerHTML = response.data[5]["title"];
-    document.getElementById("topic_7").innerHTML = response.data[6]["title"];
-    document.getElementById("topic_8").innerHTML = response.data[7]["title"];
+let d ;
+axios.get('https://michel.temss.tech/course')
+.then(function (response) {
+  a = response.data.length;
+  d = response.data;
+  z = "topic_";
+  for(b=0; b<a; b++){
+    c = z + String(b+1);
+    document.getElementById("topic").innerHTML += "<li>" + d[b]["subcategory"] + "</li>";
+  }
+    console.log(j);
+    document.getElementById("title").innerHTML = response.data[j]["subcategory"];
+    // for(i=0; i<8; i++){
+    //   y = z + String(i+1);
+    //   console.log(y)
+    //   document.getElementById(y).innerHTML = response.data[i]["subcategory"];
+    //   y = "";
+    // }
   })
 x = true;
 function side_menu(){

@@ -15,21 +15,13 @@
     <div id="container">
         <nav class="menu">
             <div class="menu_acc" id="menu_acc" onclick="side_menu()"></div>
+            <div id="title"></div>
             <div id="nav_buttons">
-                <i class="fa-solid fa-arrow-left-long fa-beat fa-4x" style="color: #000000;" onclick="next_slide()"></i>
-                <i class="fa-solid fa-arrow-right-long fa-beat fa-4x" style="color: #000000;" onclick="previous_slide()"></i>
+                <i class="fa-solid fa-arrow-left-long fa-beat fa-4x" style="color: #000000;" onclick="previous_page()"></i>
+                <i class="fa-solid fa-arrow-right-long fa-beat fa-4x" style="color: #000000;" onclick="next_page()"></i>
             </div>
             <div class="menu_content" id="menu_content">
-                <ul>
-                    <li id="topic_1"></li>
-                    <li id="topic_2"></li>
-                    <li id="topic_3"></li>
-                    <li id="topic_4"></li>
-                    <li id="topic_5"></li>
-                    <li id="topic_6"></li>
-                    <li id="topic_7"></li>
-                    <li id="topic_8"></li>
-                </ul>
+                <ul id="topic"></ul>
             </div>
         </nav>
     </div>
