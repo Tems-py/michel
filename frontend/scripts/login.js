@@ -1,9 +1,17 @@
 document.getElementById("login").addEventListener("click", () => {
-    axios.get('https://jsonplaceholder.typicode.com/posts/1')
+    axios.post('https://michel.temss.tech/auth/login', {
+        login: document.getElementById("email").value,
+        password: document.getElementById("pass").value
+    })
     .then(function (response) {
         console.log(response);
-        popup(response.data['title'])
-        localStorage.setItem("token", response.data['title'])
+        if (response.data.success){
+            popup(response.data.success)
+            localStorage.setItem("token", response.data)
+        } else {
+            popup(response.data.error)
+        }
+ 
     })
 })
 

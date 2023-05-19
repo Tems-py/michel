@@ -1,5 +1,9 @@
 document.getElementById("register").addEventListener("click", () => {
-    axios.get('https://jsonplaceholder.typicode.com/posts/1')
+    axios.post('https://michel.temss.tech/auth/register', {
+        login: document.getElementById('email'),
+        password: document.getElementById("pass"),
+        password_confirm: document.getElementById('pass_confirm')
+    })
     .then(function (response) {
         console.log(response);
         popup(response.data['title'])
