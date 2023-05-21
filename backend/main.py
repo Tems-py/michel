@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask_restful import Resource, Api
 from flaskext.mysql import MySQL
+from flask_restful import reqparse
 
 app = Flask(__name__)
 api = Api(app)
@@ -37,9 +38,21 @@ class Pages(Resource):
         return jsonify(l)
 
 
+parser = reqparse.RequestParser()
+parser.add_argument('login', type=str, help='Rate cannot be converted')
+parser.add_argument('name')
+
+
+class Auth(Resource):
+    def post(self):
+        args = parser.parse_args()
+        print(args)
+        return jsonify(args)
+
+
 api.add_resource(Course, '/course')
 api.add_resource(Pages, '/course/<int:id_page>')
-
+api.add_resource(Auth, '/auth')
 
 if __name__ == "__main__":
     app.run()

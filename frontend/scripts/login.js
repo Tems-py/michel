@@ -7,7 +7,7 @@ document.getElementById("login").addEventListener("click", () => {
         console.log(response);
         if (response.data.success){
             popup(response.data.success)
-            localStorage.setItem("token", response.data)
+            localStorage.setItem("token", response.data.token)
         } else {
             popup(response.data.error)
         }

@@ -1,8 +1,8 @@
 document.getElementById("register").addEventListener("click", () => {
     axios.post('https://michel.temss.tech/auth/register', {
-        login: document.getElementById('email'),
-        password: document.getElementById("pass"),
-        password_confirm: document.getElementById('pass_confirm')
+        'login': document.getElementById('login').value,
+        'password': document.getElementById("pass").value,
+        'password_confirm': document.getElementById('pass_confirm').value
     })
     .then(function (response) {
         console.log(response);
