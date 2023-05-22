@@ -76,3 +76,24 @@ i{
     margin: auto;
     margin-top: 30px;
 }
+
+.highlight {
+    background-color: yellowgreen !important;
+}
+#progress {
+    width: 200px;
+    height: 20px;
+    background-color: gray;
+}
+
+#progress2{
+    background-color: green;
+    height: 20px;
+    width: 200px;
+    transform: scaleX(0);
+    transition: 0.3s transform ease-in-out;
+}
+#progr {
+    position: absolute;
+    z-index: 10;
+}
