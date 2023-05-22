@@ -75,6 +75,10 @@ i{
     max-width: 80vw;
     margin: auto;
     margin-top: 30px;
+    padding: 20px;
+    border: 10px solid black;
+    border-radius: 20px;
+    font-size: large;
 }
 
 .highlight {
@@ -96,4 +100,5 @@ i{
 #progr {
     position: absolute;
     z-index: 10;
+    margin-left: 5px;
 }
