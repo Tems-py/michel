@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/test.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../scripts/test.js" defer></script>
+    <script src="../scripts/auth.js" defer></script>
+    <title>Logowanie</title>
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <div><a href="/">Strona główna</a></div>
+            <div><a href="/course/">Kurs</a></div>
+            <div class="hide_when_logged"><a href="/login/">Logowanie</a></div>
+            <div class="hide_when_logged"><a href="/register/">Rejestracja</a></div>
+            <div class="show_when_logged hide"><a href="/logout/">Wyloguj</a></div>
+        </div>
+        <div id="content">
+            <h1>Test sprawdzający</h1>
+            <div id="test">
+
+            </div>
+        </div>
+    </div>
+    <div id="popup"></div>
+</body>
+</html>
