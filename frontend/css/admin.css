@@ -1,0 +1,19 @@
+#sidebar{
+    background-color: #E0FBFC;
+    float: left;
+    width: 20vw;
+    padding: 2%;
+    min-height: 90vh;
+    box-sizing: border-box;
+}
+#content{
+    background-color: #293241;
+    float: left;
+    width: 80vw;
+    min-height: 90vh;
+    padding: 2%;
+    box-sizing: border-box;
+}
+#sidebar > div{
+    margin: 4%;
+}
