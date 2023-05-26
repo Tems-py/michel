@@ -7,13 +7,29 @@
     box-sizing: border-box;
 }
 #content{
-    background-color: #293241;
+    background-color: #3D5A80;
     float: left;
     width: 80vw;
     min-height: 90vh;
     padding: 2%;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
 #sidebar > div{
     margin: 4%;
+}
+.stat{
+    background-color: #293241;
+    width: 35vw;
+    min-height: 35vh;
+    border-radius: 12px;
+}
+
+
+
+.stat_row{
+    display: flex;
+    justify-content: space-around;
 }
