@@ -33,3 +33,30 @@
     display: flex;
     justify-content: space-around;
 }
+
+table, tr, td{
+    margin: auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    color: white
+}
+
+#modal {
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    transform: translateX(-50%) translateY(-300%);
+    left: 50%;
+    top: 50%;
+    background: rgba(155, 137, 137, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.3s transform ease-in-out;
+}
+
+.modal_show {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) !important;
+}
