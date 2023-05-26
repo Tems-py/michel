@@ -102,3 +102,18 @@ i{
     z-index: 10;
     margin-left: 5px;
 }
+
+#popup {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    padding: 20px;
+    background-color: orange;
+    border-radius: 5px;
+    transform: translateY(300%);
+    transition: 0.3s transform ease-in-out;
+    min-height: 300px;
+    min-width: 1700px;
+    font-size: 500%;
+    text-align: center;
+}

@@ -34,6 +34,14 @@ axios.get('https://michel.temss.tech/course')
   update_bar()
 })
 
+function popup() {
+  document.getElementById("popup").innerHTML = "Czy checesz zrobić quiz sprawdzający? <a href=\"../test/index.html\">Quiz</a>" 
+  document.getElementById("popup").style.transform = "translateY(0%)"
+  setTimeout(() => {
+    document.getElementById("popup").style.transform = "translateY(300%)"
+  }, 8000)
+}
+
 function update_bar(){
   let progr = document.getElementById("progress2")
   document.getElementById("progr").innerHTML = `${Math.round(current_page/(course_lenght-1) * 100)}%`
@@ -59,6 +67,9 @@ document.getElementById("next").addEventListener("click", () => {
   if (current_page < course_lenght - 1){
     current_page += 1;
     change()
+  }
+  else {
+    popup()
   }
 })
 
