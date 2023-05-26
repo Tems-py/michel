@@ -8,6 +8,7 @@ document.getElementById("login").addEventListener("click", () => {
         if (response.data.success){
             popup(response.data.success)
             localStorage.setItem("token", response.data.token)
+            setTimeout(window.location.href = "../index.html", 1000)
         } else {
             popup(response.data.error)
         }
