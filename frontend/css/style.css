@@ -5,6 +5,9 @@ body {
     margin: 0px;
     font-family: Roboto;
     background-color: #3D5A80;
+    overflow-x: hidden;
+    width: 100vw;
+    min-height: 100vh;
 }
 
 #container {
