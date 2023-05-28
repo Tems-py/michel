@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../../scripts/questions.js" defer></script>
+    <script src="../../scripts/auth.js" defer></script>
+
     <title>Admin</title>
 </head>
 <body>
@@ -23,15 +28,19 @@
             <div><a href="/admin/questions/">Test</a></div>
         </div>
         <div id="content">
-            <div class="stat_row">
-                <div class="stat"></div>
-                <div class="stat"></div>
-            </div>
-            <div class="stat_row">
-                <div class="stat"></div>
-                <div class="stat"></div>
-            </div>
+            <table id="tabl">
+                <tr>
+                    <td>Id</td>
+                    <td>Treść</td>
+                    <td>ODP A</td>
+                    <td>ODP B</td>
+                    <td>ODP C</td>
+                    <td>ODP D</td>
+                    <td>Opcje</td>
+                </tr>
+            </table>
         </div>
     </div>
+    <div id="modal"></div>
 </body>
 </html>

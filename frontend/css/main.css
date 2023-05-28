@@ -40,13 +40,14 @@
     font-size: 1.5em;
 }
 
-#login{
+#login_form{
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 2em;
     padding-bottom: 2em;
     background-color: #3D5A80;
+    
 }
 
 

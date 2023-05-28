@@ -1,13 +1,35 @@
 document.getElementById("register").addEventListener("click", () => {
-    axios.post('https://michel.temss.tech/auth/register', {
-        'login': document.getElementById('login').value,
-        'password': document.getElementById("pass").value,
-        'password_confirm': document.getElementById('pass_confirm').value
-    })
+
+    let contt = {}
+    if (document.getElementById("login").value){
+        contt.login = document.getElementById("login").value
+    }
+    if (document.getElementById("pass").value){
+        contt.password = document.getElementById("pass").value
+    }
+    if (document.getElementById("pass_confirm").value){
+        contt.password_confirm = document.getElementById("pass_confirm").value
+    }
+
+
+    axios.post('https://michel.temss.tech/auth/register', contt)
     .then(function (response) {
-        console.log(response);
-        popup(response.data['title'])
+        console.log(response)
+        if (response.data.success){
+            popup(response.data.success)
+            setTimeout(window.location.href = "/login", 1000)
+        } else {
+            popup(response.data.error)
+        }
     })
+    .catch(function (error) {
+        console.log(error.response.data);
+        messages = ""
+        for(let i in error.response.data.message){
+            messages += error.response.data.message[i] + "<br>"
+        }
+        popup(messages)
+    });
 })
 
 function popup(text){
