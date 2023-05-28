@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukończyłeś kurs</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container > * {
+            margin: 10px;
+        }
+
+        #container > a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+        #container > a:hover {
+            color: blue;
+        }
+
+        #container > h1 {
+            font-size: 40px;
+        }
+
+        #container > p {
+            font-size: 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        let score = window.location.search.split('=')[1];
+        let container = document.getElementById('container');
+
+        let h1 = document.createElement('h1');
+        h1.innerText = 'Ukończyłeś kurs!';
+        container.appendChild(h1);
+
+        let p = document.createElement('p');
+        p.innerText = `Twój wynik to: ${score}`;
+        container.appendChild(p);
+
+        let a = document.createElement('a');
+        a.href = '/course/';
+        a.innerText = 'Wróć do kursu';
+        container.appendChild(a);
+
+        let a2 = document.createElement('a');
+        a2.href = '/logout/';
+        a2.innerText = 'Wyloguj';
+        container.appendChild(a2);
+
+
+    </script>
+</body>
+</html>

@@ -68,8 +68,6 @@ document.getElementById("subm").addEventListener("click", () => {
         data = r.data;
         console.log(data)
         document.getElementById("container").innerHTML = ""
-        let h1 = document.createElement("h1")
-        h1.innerHTML = `Ukończyłeś kurs z wynikiem ${data['result']}/10`
-        document.getElementById("container").appendChild(h1)
+        window.location.href = "/course/finished/?result="+data['result']
     })
 })
