@@ -68,3 +68,11 @@ i{
 #title{
     font-size: xx-large;
 }
+
+#content{
+    background-color: #696e9e;
+    min-height: 80vh;
+    max-width: 80vw;
+    margin: auto;
+    margin-top: 30px;
+}
